@@ -13,7 +13,6 @@ public class MaxHeapWordFreq {
     static void buildMaxHeap(WordFreq[] arr) {
         int n = arr.length;
 
-        // Start from last non-leaf node and heapify each node
         for (int i = n / 2 - 1; i >= 0; i--) {
             maxHeapify(arr, n, i);
         }
@@ -31,7 +30,6 @@ public class MaxHeapWordFreq {
             largest = right;
 
         if (largest != i) {
-            // Swap
             WordFreq temp = arr[i];
             arr[i] = arr[largest];
             arr[largest] = temp;
